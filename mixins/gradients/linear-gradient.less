@@ -1,0 +1,13 @@
+/* usage: .linear-gradient(#fff, #000); */
+
+.linear-gradient(@start:left top, @end: left bottom, @startColor: #555, @endColor: #333) {
+		background-color: @endColor;
+		background-repeat: no-repeat;
+		background-image: -webkit-gradient(linear, @start, @end, from(@startColor), to(@endColor));
+		background-image: -webkit-linear-gradient(@start, @end, @startColor, @endColor);
+		background-image: -moz-linear-gradient(@start, @end, @startColor, @endColor);
+		background-image: -o-linear-gradient(@start, @end,  @startColor,  @endColor);
+		background-image: -khtml-gradient(linear, @start, @end, from(@startColor), to(@endColor));
+		
+		
+}

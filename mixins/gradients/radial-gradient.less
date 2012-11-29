@@ -1,0 +1,11 @@
+/* usage: .radial-gradient(50%, 50%, circle, cover, #ffffff, 0%, #000000, 100%); */
+
+.radial-gradient(@centerX: center, @centerY: center, @shape: circle, @size: contain, @startColor: #555, @startPos: 0, @endColor: #333, @endPos: 100%) {
+	background-color:@endColor;
+	background-image: -moz-radial-gradient(@centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+	background-image: -webkit-gradient(radial, @centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+	background-image: -webkit-radial-gradient(@centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+	background-image: -o-radial-gradient(@centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+	background-image: -ms-radial-gradient(@centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+	background-image: radial-gradient(@centerX @centerY, @shape @size, @startColor @startPos, @endColor @endPos);
+}

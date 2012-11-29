@@ -1,0 +1,9 @@
+/* usage: .arrow-left(20px, white); */
+
+.arrow-left(@width: 5px, @color: black) {
+	width: 0; 
+	height: 0; 
+	border-top: @width solid transparent;
+	border-bottom: @width solid transparent;
+	border-right: @width solid @color;
+}

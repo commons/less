@@ -1,0 +1,13 @@
+/* usage: .cirle(100px, papayawhip); */
+
+.circle(@radius: 100px, @color: black, @border:none) {
+	 width:@radius*2;
+	 height:@radius*2;
+	 background-color:@color;
+	 border:@border;
+	 -moz-border-radius:@radius;
+	 -webkit-border-radius:@radius;
+	 -o-border-radius:@radius;
+	 -ms-border-radius:@radius;
+	 border-radius:@radius;
+}

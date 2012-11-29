@@ -1,0 +1,9 @@
+/* usage: .arrow-down(20px, white); */
+
+.arrow-down(@width: 5px, @color: black) {
+	width: 0; 
+	height: 0; 
+	border-left: @width solid transparent;
+	border-right: @width solid transparent;
+	border-top: @width solid @color;
+}
