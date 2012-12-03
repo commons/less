@@ -1,0 +1,74 @@
+@import "../../mixins/shapes/circle.less";
+@import "../../mixins/animations/transition.less";
+@import "../../mixins/gradients/linear-gradient.less";
+
+html {
+	height:100%;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { margin:0; padding:0 }
+
+body {
+	.linear-gradient(left bottom, right top, #fff, #000);
+	font-family:'Open Sans', Arial, Helvetica, sans-serif;
+	font-size:100%;
+	line-height:150%;
+}
+
+h1 {
+	font-size:3em;
+}
+
+h2 {
+	font-size:2.5em;
+}
+
+h3 {
+	font-size:2em;
+}
+
+h4 {
+	font-size:1.5em;
+}
+
+h5 {
+	font-size:1.2em;
+}
+
+h6 {
+	font-size:1em;
+}
+
+
+.circle {
+	float:left;
+	background-repeat: no-repeat;
+	background-size:contain;
+	overflow:hidden;
+	margin:10px;
+	/* mixins */
+	.circle(160px, black, 10px solid #ccc);
+	.transition(1s, ease);
+}
+
+.circle:hover {
+	border-color: #fff;
+	overflow:hidden;
+}
+
+.circle .overlay {
+	margin-top:100%;
+	height:100%; 
+	padding:20px;
+	text-align:center;
+	background-color:#C00;
+	overflow:hidden;
+	color:#fff;
+	.transition(all, .5s, ease);
+}
+
+.circle:hover .overlay {
+	margin-top:50%;
+	background-color:rgba(255, 0, 0, .5);
+}

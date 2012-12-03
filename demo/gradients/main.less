@@ -1,0 +1,68 @@
+@import "../../mixins/gradients/linear-gradient.less";
+@import "../../mixins/gradients/radial-gradient.less";
+
+/* variables */
+@padding-max:20px;
+@padding-med:10px;
+@padding-min:5px;
+
+@margin-max:20px;
+@margin-med:10px;
+@margin-min:5px;
+
+html, body {
+	height:100%;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { margin:0; padding:0 }
+
+body {
+	font-family:'Open Sans', Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#fff;
+	line-height:150%;
+}
+
+h1 {
+	font-size:3em;
+	vertical-align:middle;
+	margin:@margin-med;
+}
+
+h2 {
+	font-size:2.5em;
+}
+
+h3 {
+	font-size:2em;
+}
+
+h4 {
+	font-size:1.5em;
+}
+
+h5 {
+	font-size:1.2em;
+}
+
+h6 {
+	font-size:1em;
+}
+
+div.linear {
+	height:100%;
+	width:50%;
+	float:left;
+	text-align:center;
+	.linear-gradient(left bottom, right top, #fff, #000);
+}
+
+div.radial {
+	height:100%;
+	width:50%;
+	float:left;
+	text-align:center;
+	.radial-gradient(50%, 50%, circle, cover, #ffffff, 0%, #000000, 100%);
+}
+

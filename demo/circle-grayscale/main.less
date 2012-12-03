@@ -1,0 +1,58 @@
+@import "../../mixins/shapes/circle.less";
+@import "../../mixins/filters/grayscale.less";
+
+html {
+	height:100%;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { margin:0; padding:0 }
+
+body {
+	background-color:#999;
+	font-family:'Open Sans', Arial, Helvetica, sans-serif;
+	font-size:100%;
+	line-height:150%;
+}
+
+h1 {
+	font-size:3em;
+}
+
+h2 {
+	font-size:2.5em;
+}
+
+h3 {
+	font-size:2em;
+}
+
+h4 {
+	font-size:1.5em;
+}
+
+h5 {
+	font-size:1.2em;
+}
+
+h6 {
+	font-size:1em;
+}
+
+
+.circle {
+	float:left;
+	background-repeat: no-repeat;
+	background-size:contain;
+	overflow:hidden;
+	margin:10px;
+	/* mixins */
+	.circle(160px, black, 10px solid #ccc);
+	.grayscale(1);
+}
+
+.circle:hover {
+	border-color: #fff;
+	overflow:hidden;
+	.grayscale(0);
+}
