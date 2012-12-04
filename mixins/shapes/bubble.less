@@ -1,0 +1,38 @@
+/* usage: .bubble(200px, 200px, 20px, 20px, #f00, #c00, 25%, 20px, 20px); */
+
+.bubble(@width: auto, @height: auto, @margin:auto, @padding:auto, @bgcolor: black, @hover:#ccc, @pos:50%, @radius:15px, @tip:15px ) {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: @width;
+	height: @height;
+	margin: @margin;
+	padding:@padding;
+	background: @bgcolor;
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	
+	
+	&:before, &:after { 
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: @pos;
+	border-top: @tip solid transparent;
+	border-left: 0 solid transparent;
+	border-right: @tip solid transparent;
+	border-left-color:@bgcolor;
+	border-top-color:@bgcolor;
+	}
+
+	&:hover {
+	background: (@hover);
+	}
+
+	&:hover:before, &:hover:after   { 
+		border-left-color:@hover;
+		border-top-color:@hover;
+	}
+	
+}
