@@ -1,5 +1,6 @@
 @import "../../mixins/gradients/linear-gradient.less";
 @import "../../mixins/gradients/radial-gradient.less";
+@import "../../mixins/gradients/radial-gradient-3color.less";
 
 /* variables */
 @padding-max:20px;
@@ -64,5 +65,14 @@ div.radial {
 	float:left;
 	text-align:center;
 	.radial-gradient(50%, 50%, circle, cover, #ffffff, 0%, #000000, 100%);
+}
+
+div.radial-3color {
+	height:100%;
+	width:50%;
+	float:left;
+	text-align:center;
+	.radial-gradient-3color(#f00 0%, #0f0 50%, #00f 100%);
+	
 }
 
