@@ -1,0 +1,78 @@
+@import "../../../mixins/animations/rotate.less";
+
+/* variables */
+@padding-max:20px;
+@padding-med:10px;
+@padding-min:5px;
+
+@margin-max:20px;
+@margin-med:10px;
+@margin-min:5px;
+
+
+html, body {
+	height:100%;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { margin:0; padding:0 }
+
+body {
+	font-family:'Open Sans', Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#000;
+	line-height:150%;
+	padding:@padding-max;
+}
+
+h1 {
+	font-size:3em;
+	margin:@margin-max 0;
+}
+
+h2 {
+	font-size:2.5em;
+}
+
+h3 {
+	font-size:2em;
+}
+
+h4 {
+	font-size:1.5em;
+}
+
+h5 {
+	font-size:1.2em;
+}
+
+h6 {
+	font-size:1em;
+}
+
+
+
+pre {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+
+.usage, .usage pre { 
+	color:#333;
+}
+
+.rotater {
+	background: url('../../_assets/img/spinner.gif');
+	width:32px;
+	height:32px;
+	.rotate(10s, infinite);
+}
+
+.tater2 {
+	background: url('../../_assets/img/splitterbot.png');
+	width:350px;
+	height:350px;
+	.rotate(20s, infinite);
+}
