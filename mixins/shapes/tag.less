@@ -1,0 +1,57 @@
+
+
+.tag (@width: 50px, @height: 20px, @margin:0, @padding:5px, @bgcolor: black, @color:#fff, @hover:#ccc, @radius:5px, @tip:20px ) {
+	width:@width;
+	height:@height;
+	position:relative;
+	display:inline-block;
+	padding:@padding;
+	margin-left:@tip;
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	border-radius:@radius;
+	background-color:@bgcolor;
+	color:@color;
+	text-decoration:none;
+	
+	a {
+		display:inline-block;
+		height:@height;
+	}
+	
+		&:after {
+			content:"";
+			width:@tip;
+			height:@height;
+			background-color:@bgcolor;
+			-moz-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			display:block;
+			position:absolute;
+			top:4px;
+			left:-10px;
+			z-index:-1;
+    	}
+	
+		/* &:before{
+    		content:"";
+    		width:5px;
+    		height:5px;
+    		background:#fff;
+    		position:absolute;
+    		top:12px;
+    		left:-5px;
+    		-moz-border-radius:5px;
+    		-webkit-border-radius:5px;
+		} */
+
+}
+
+
+
+
+
+
+
+
+
