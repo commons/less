@@ -1,0 +1,88 @@
+@import "../../mixins/filters/grayscale.less";
+@import "../../mixins/filters/blur.less";
+@import "../../mixins/filters/sepia.less";
+@import "../../mixins/filters/opacity.less";
+@import "../../mixins/filters/hue-rotate.less";
+@import "../../mixins/filters/invert.less";
+@import "../../mixins/filters/brightness.less";
+
+/* variables */
+@padding-max: 20px;
+@padding-med: 10px;
+@padding-min: 5px;
+
+@margin-max: 20px;
+@margin-med: 10px;
+@margin-min: 5px;
+
+html, body {
+	height: 100%;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { margin: 0; padding: 0 }
+
+body {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #000;
+	line-height: 150%;
+}
+
+h1 {
+	font-size: 3em;
+	vertical-align: middle;
+	margin: @margin-med;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+h5 {
+	font-size: 1.2em;
+}
+
+h6 {
+	font-size: 1em;
+}
+
+div {
+	float: left;
+	margin: @margin-max;
+}
+div.grayscale img {
+	.grayscale(1);
+}
+
+div.blur img {
+	.blur(1px);
+}
+
+div.sepia img {
+	.sepia(1);
+}
+
+div.opacity img {
+	.opacity(.5);
+}
+
+div.hue-rotate img {
+	.hue-rotate();
+}
+
+div.invert img {
+	.invert();
+}
+
+div.brightness img {
+	.brightness(.8);
+}
