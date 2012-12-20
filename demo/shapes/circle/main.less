@@ -1,0 +1,84 @@
+@import "../../../mixins/shapes/circle.less";
+
+/* variables */
+@padding-max:20px;
+@padding-med:10px;
+@padding-min:5px;
+
+@margin-max:20px;
+@margin-med:10px;
+@margin-min:5px;
+
+
+html, body {
+	height:100%;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { margin:0; padding:0 }
+
+body {
+	font-family:'Open Sans', Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#000;
+	line-height:150%;
+	padding:@padding-max;
+}
+
+h1 {
+	font-size:3em;
+	
+	margin:@margin-med 0;
+}
+
+h2 {
+	font-size:2.5em;
+}
+
+h3 {
+	font-size:2em;
+}
+
+h4 {
+	font-size:1.5em;
+}
+
+h5 {
+	font-size:1.2em;
+}
+
+h6 {
+	font-size:1em;
+}
+
+pre {
+  text-wrap: wrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  word-wrap: break-word;
+}
+
+.usage, .usage pre { 
+	color:#333;
+}
+
+@circlecolor: #e33100;
+@circlehover: #872300;
+
+.circle1 {
+	.circle(100px, papayawhip);
+}
+
+.circle2 {
+	.circle(260px, red, 1px solid #333);
+	float:left;
+	color:#fff;
+	display:table;
+	div {
+		padding:0 40px;
+		display:table-cell; 
+		vertical-align:middle;
+	}
+}
+
+
