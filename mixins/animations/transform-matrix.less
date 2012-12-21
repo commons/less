@@ -1,0 +1,8 @@
+/* usage: .transform-matrix(1.5, 0, 0.7, 0.7, 200, 10); */
+
+.transform-matrix (@a:1, @c:0, @b:0.5, @d:0.5, @tx:0, @ty:0) {
+	-webkit-transform: matrix(@a, @c, @b, @d, @tx, @ty);
+	-o-transform: matrix(@a, @c, @b, @d, @tx, @ty);
+	-ms-transform:matrix(@a, @c, @b, @d, @tx, @ty);
+	transform: matrix(@a, @c, @b, @d, @tx, @ty);
+}
