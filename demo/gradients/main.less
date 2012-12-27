@@ -1,6 +1,7 @@
 @import "../../mixins/gradients/linear-gradient.less";
 @import "../../mixins/gradients/radial-gradient.less";
 @import "../../mixins/gradients/radial-gradient-3color.less";
+@import "../../mixins/gradients/radial-gradient-sphere.less";
 
 /* variables */
 @padding-max:20px;
@@ -72,7 +73,15 @@ div.radial-3color {
 	width:50%;
 	float:left;
 	text-align:left;
-	.radial-gradient-3color(#9ff 10%, #0f0 30%, #ff0 90%);
+	.radial-gradient-3color(circle, #9ff 10%, #0f0 30%, #ff0 90%);
 	
 }
 
+div.sphere {
+	height:100%;
+	width:50%;
+	border-radius: 50%;
+	float:left;
+	text-align:left;
+	.radial-gradient-sphere(#9f0);
+}

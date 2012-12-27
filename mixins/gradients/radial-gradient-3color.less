@@ -1,11 +1,11 @@
 /* usage: .radial-gradient-3color(#f00 0%, #0f0 50%, #00f 100%); */
 
-.radial-gradient-3color(@color1: #000 0%, @color2: #999 50%, @color3: #fff) {
+.radial-gradient-3color(@shape: ellipse, @color1: #000 0%, @color2: #999 50%, @color3: #fff) {
 	background-color:@color1;
-	background-image: -moz-radial-gradient(center center, circle, @color1, @color2, @color3);
-	background-image: -webkit-gradient(center center, circle, @color1, @color2, @color3);
-	background-image: -webkit-radial-gradient(center center, circle, @color1, @color2, @color3);
-	background-image: -o-radial-gradient(center center, circle, @color1, @color2, @color3);
-	background-image: -ms-radial-gradient(center center, circle, @color1, @color2, @color3);
-	background-image: radial-gradient(center center, circle, @color1, @color2, @color3);
+	background-image: -moz-radial-gradient(center center, @shape, @color1, @color2, @color3);
+	background-image: -webkit-gradient(center center, @shape, @color1, @color2, @color3);
+	background-image: -webkit-radial-gradient(center center, @shape, @color1, @color2, @color3);
+	background-image: -o-radial-gradient(center center, @shape, @color1, @color2, @color3);
+	background-image: -ms-radial-gradient(center center, @shape, @color1, @color2, @color3);
+	background-image: radial-gradient(@shape at center, @color1, @color2, @color3);
 }

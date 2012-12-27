@@ -1,0 +1,8 @@
+.radial-gradient-sphere(@color1: red, @color2:black, @centerX: 30%, @centerY: 40%) {
+	background-image: -webkit-radial-gradient(@centerX @centerY, @color1, @color2);
+	background-image: -moz-radial-gradient(@centerX @centerY, @color1, @color2);
+	background-image: -ms-radial-gradient(@centerX @centerY, @color1, @color2);
+	background-image: -o-radial-gradient(@centerX @centerY, @color1, @color2);
+	background-image: radial-gradient(circle at @centerX @centerY, @color1, @color2);
+}
+
