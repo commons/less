@@ -1,8 +1,11 @@
-/* usage: .transition(1s, ease); */
+/* usage: .transition(all, 1s, ease, 0); */
 
 .transition (@property: all, @duration: .5s, @timing: linear, @delay: 0 ) {
 	-webkit-transition: @arguments;
 	-moz-transition: @arguments;
 	-o-transition: @arguments;
-	transition: @arguments;
+	transition-property: @property;
+  	transition-duration: @duration;
+	transition-timing-function: @timing;
+  	transition-delay: @delay;
 }
