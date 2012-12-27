@@ -5,12 +5,11 @@
 		background-repeat: no-repeat;
 		background-image: -webkit-gradient(linear, @start, @end, from(@startColor), to(@endColor));
 		background-image: -webkit-linear-gradient(@start, @end, @startColor, @endColor);
-		/* background-image: -moz-linear-gradient(@start, @end, @startColor, @endColor); */
+		background-image: -moz-linear-gradient(@start, @end, @startColor, @endColor);
+		background-image: -ms-linear-gradient(@start, @end, @startColor, @endColor);
 		background-image: -o-linear-gradient(@start, @end,  @startColor,  @endColor);
-		/* background-image: -khtml-gradient(linear, @start, @end, from(@startColor), to(@endColor)); */
-		background: linear-gradient(@start, @end, @startColor, @endColor);
-		
-		
+		background-image: linear-gradient(to @end, @startColor, @endColor);
 }
+
 
 
