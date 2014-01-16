@@ -8,13 +8,14 @@
 	height:150px;
 	text-decoration:none;
 	overflow:hidden;
+	z-index: 9999;
 
 	&:hover, .ribbon a {
 		/* text-decoration:none; */
 	}
-	
+
 	.tag:hover { background: @hover; color: @hoverfont; }
-	
+
 	.tag {
 		display:block;
 		height:30px;
@@ -30,12 +31,12 @@
 		-ms-transform-origin:15px 0px;
 		-o-transform-origin:15px 0px;
 		transform-origin:15px 0px;
-		-webkit-transform:translate(80.00000000000003px, -14.999999999999996px) rotate(45.000000000000014deg);	
+		-webkit-transform:translate(80.00000000000003px, -14.999999999999996px) rotate(45.000000000000014deg);
 		-moz-transform:translate(80.00000000000003px, -14.999999999999996px) rotate(45.000000000000014deg);
-		-ms-transform:translate(80.00000000000003px, -14.999999999999996px) rotate(45.000000000000014deg);	
-		-o-transform:translate(80.00000000000003px, -14.999999999999996px) rotate(45.000000000000014deg);			
-	
-	
+		-ms-transform:translate(80.00000000000003px, -14.999999999999996px) rotate(45.000000000000014deg);
+		-o-transform:translate(80.00000000000003px, -14.999999999999996px) rotate(45.000000000000014deg);
+
+
 			.tag:after {
 			content: '';
 			display:block;
@@ -48,7 +49,7 @@
 			border:1px solid rgba( 255, 255, 255, 0.4 );
 			}
 
-			
+
 
 		}
 }
@@ -58,13 +59,13 @@
 	.ribbon-tr {
 		width:120px;
 		height:120px;
-		
+
 		.tag {
 			height: 30px;
 			width: 120px;
 			-webkit-transform: translate(50.00000000000003px, -14.999999999999996px) rotate(45.000000000000014deg);
 		}
-		
+
 		.tag:after {
 			width: 156px;
 			height: 26px;
