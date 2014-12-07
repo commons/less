@@ -1,0 +1,18 @@
+/* usage .zoom(-400rem, 0, 80rem); */
+
+.zoom (@translateZ: -120rem, @opacity: 1, @perspective: 12rem ) {
+	-webkit-transform: perspective(@perspective) translate3d(0, 0, @translateZ);
+	-moz-transform: perspective(@perspective) translate3d(0, 0, @translateZ);
+	-ms-transform: perspective(@perspective) translate3d(0, 0, @translateZ);
+	-o-transform: perspective(@perspective) translate3d(0, 0, @translateZ);
+	transform: perspective(@perspective) translate3d(0, 0, @translateZ); 
+	opacity: @opacity;
+}
+
+.zoom-in (@translateZ: 100%, @opacity: 1, @perspective: 200px ) {
+	.zoom(-1* @translateZ, @opacity, @perspective);
+}
+
+.zoom-out (@translateZ: 100%, @opacity: 1, @perspective: 200px ) {
+	.zoom(@translateZ, @opacity, @perspective);
+}
