@@ -1,0 +1,17 @@
+/* usage .slide(-100%, 0); */
+
+.slide (@translateX: 100%, @translateY: 0 ) {
+	-webkit-transform: translate3d(@translateX, @translateY, 0);
+	-moz-transform: translate3d(@translateX, @translateY, 0);
+	-ms-transform: translate3d(@translateX, @translateY, 0);
+	-o-transform: translate3d(@translateX, @translateY, 0);
+	transform: translate3d(@translateX, @translateY, 0);
+}
+
+.slide-left (@translateX: 100%, @translateY: 0 ) {
+	.zoom(@translateX, @translateY);
+}
+
+.slide-right (@translateX: 100%, @translateY: 0 ) {
+	.zoom(-1* @translateX, @translateY);
+}
