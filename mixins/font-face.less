@@ -1,14 +1,14 @@
-/* usage: .font-face('iconset', 'fonts'); */
+/* usage: .font-face('iconset', '../fonts'); */
 
-.font-face (@fontname, @fontpath) {
-    @font-face {
-        font-family: @fontname;
-        src: url('@{fontpath}/@{fontname}/webfont.eot');
-        src: url('@{fontpath}/@{fontname}/webfont.eot?#iefix') format('embedded-opentype'),
-             url('@{fontpath}/@{fontname}/webfont.woff') format('woff'),
-             url('@{fontpath}/@{fontname}/webfont.ttf') format('truetype'),
-             url('@{fontpath}/@{fontname}/webfont.svg#@{fontname}') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
+.font-face (@fontname, @fontpath: '../fonts') {
+	@font-face {
+		font-family: @fontname;
+		src: url('@{fontpath}/@{fontname}/webfont.eot');
+		src: url('@{fontpath}/@{fontname}/webfont.eot?#iefix') format('embedded-opentype'),
+			 url('@{fontpath}/@{fontname}/webfont.woff') format('woff'),
+			 url('@{fontpath}/@{fontname}/webfont.ttf') format('truetype'),
+			 url('@{fontpath}/@{fontname}/webfont.svg#@{fontname}') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
 }
