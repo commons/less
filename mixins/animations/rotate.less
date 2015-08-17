@@ -1,19 +1,25 @@
 /* usage .rotate(10s, infinite); */
 
-.rotate(@duration:1s, @iteration:infinite) {
-	-webkit-animation: rotating @duration linear @iteration;
-	animation-duration: @duration;
+.rotate(@duration:1s, @iteration:infinite, @easing:linear) {
 	animation-name: rotating;
-	animation-timing-function:linear;
+	animation-duration: @duration;
+	animation-timing-function: @easing;
 	animation-iteration-count: @iteration;
+	/* safari */
+	-webkit-animation-name: rotating;
+	-webkit-animation-duration: @duration;
+	-webkit-animation-timing-function:@easing;
+	-webkit-animation-iteration-count: @iteration;
 }
 
 @-webkit-keyframes rotating {
 	from {
 		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
 	}
 	to {
 		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
 
