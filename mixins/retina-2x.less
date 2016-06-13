@@ -2,33 +2,33 @@
 // retina-2x.less
 
 .retina-2x(@image, @width, @height, @repeat: no-repeat) {
-    @filename  : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[1]`;
-    @extension : ~`/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[2]`;
-    background-image: ~`"url(@{filename}.@{extension})"`;
-    background-repeat: @repeat;
+	@filename  : ~'/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[1]';
+	@extension : ~'/(.*)\.(jpg|jpeg|png|gif)/.exec(@{image})[2]';
+	background-image: ~'"url(@{filename}.@{extension})"';
+	background-repeat: @repeat;
 
-    @media
-        only screen and (-webkit-min-device-pixel-ratio: 2),
-        only screen and (   min--moz-device-pixel-ratio: 2),
-        only screen and (     -o-min-device-pixel-ratio: 2/1),
-        only screen and (        min-device-pixel-ratio: 2),
-        only screen and (                min-resolution: 192dpi),
-        only screen and (                min-resolution: 2dppx) {
-            /* on retina, use image that's scaled by 2 */
-            background-image: ~`"url(@{filename}@2x.@{extension})"`;
-            background-size: @width @height;
-        }
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (	 -o-min-device-pixel-ratio: 2/1),
+		only screen and (		min-device-pixel-ratio: 2),
+		only screen and (				min-resolution: 192dpi),
+		only screen and (				min-resolution: 2dppx) {
+			/* on retina, use image that's scaled by 2 */
+			background-image: ~'"url(@{filename}@2x.@{extension})"';
+			background-size: @width @height;
+		}
 }
 
 /* usage
 .image-logo {
-    width: 100px;
-    height: 50px;
-    .retina-2x('image.png', 100px, 50px);
+	width: 100px;
+	height: 50px;
+	.retina-2x('image.png', 100px, 50px);
 }
 
 .repeating-background-image {
-    background-color: #444;
-    .retina-2x('image.png', 200px, 200px, repeat);
+	background-color: #444;
+	.retina-2x('image.png', 200px, 200px, repeat);
 }
 */
