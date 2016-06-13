@@ -1,6 +1,6 @@
-/* usage: .font-face('iconset', '../fonts'); */
+/* usage: .font-face('iconset', 'fonts'); */
 
-.font-face (@fontname, @fontpath: '../fonts') {
+.font-face (@fontname, @fontpath: "../fonts", @version: false) when (@version = false) {
 	@font-face {
 		font-family: @fontname;
 		src: url('@{fontpath}/@{fontname}/webfont.eot');
@@ -12,3 +12,17 @@
 		font-style: normal;
 	}
 }
+
+.font-face (@fontname, @fontpath: "../fonts", @version: false) when not (@version = false) {
+	@font-face {
+		font-family: @fontname;
+		src: url('@{fontpath}/@{fontname}/@{version}/webfont.eot');
+		src: url('@{fontpath}/@{fontname}/@{version}/webfont.eot?#iefix') format('embedded-opentype'),
+			 url('@{fontpath}/@{fontname}/@{version}/webfont.woff') format('woff'),
+			 url('@{fontpath}/@{fontname}/@{version}/webfont.ttf') format('truetype'),
+			 url('@{fontpath}/@{fontname}/@{version}/webfont.svg#@{fontname}') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
